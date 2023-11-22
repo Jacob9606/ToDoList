@@ -1,0 +1,154 @@
+/* 부모 요소(body)에 대한 스타일 */
+body {
+  display: flex;
+  flex-direction: column; /* 요소들을 위에서 아래로 배치 */
+  justify-content: center; /* 수직 가운데 정렬 */
+  align-items: center; /* 수평 가운데 정렬 */
+  height: 100vh; /* 화면 높이와 동일한 높이로 설정 */
+  margin: 0;
+  background-color: #f0f0f0; /* 배경색 지정 */
+  position: relative; /* 부모 요소를 상대 위치로 설정 */
+}
+
+/* 이미지 스타일 */
+img {
+  width: 100%; /* 이미지의 너비를 화면 너비에 맞게 조정 */
+  height: auto; /* 이미지의 높이를 자동으로 조정하여 가로 세로 비율 유지 */
+  max-width: 100%; /* 이미지의 최대 너비를 화면 너비에 맞게 설정 */
+  max-height: 100%; /* 이미지의 최대 높이를 화면 높이에 맞게 설정 */
+  position: absolute; /* 이미지를 절대 위치로 설정 */
+  top: 0; /* 상단 위치를 0으로 설정 */
+  left: 0; /* 왼쪽 위치를 0으로 설정 */
+  z-index: -1; /* 이미지의 z-index를 설정하여 뒤로 이동 */
+}
+
+/* 요소에 대한 스타일 */
+form,
+h2,
+h1,
+ul,
+div {
+  /* 글자 색을 흰색으로 설정 */
+  color: white;
+  /* 글자 크기를 키우세요. */
+  font-size: 50px;
+  /* 필요한 스타일을 여기에 추가하세요 */
+  margin: 20px; /* 요소들 간의 간격 조절 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  position: relative; /* 요소들을 상대 위치로 설정 */
+  z-index: 1; /* 요소들의 z-index를 설정하여 이미지 위에 배치 */
+}
+
+#clock {
+  font-size: 150px;
+}
+
+#todo-form input[type="text"] {
+  flex: 1; /* 남은 공간을 모두 채우기 */
+  margin-right: 10px; /* 버튼과의 간격 */
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #5f6368; /* 밑줄 스타일 */
+  background-color: transparent; /* 배경색을 투명하게 */
+  color: white;
+  font-size: 30px;
+}
+
+#login-form input[type="text"] {
+  /* 텍스트 박스의 너비와 높이를 조절하세요. */
+  width: 250px; /* 예시로 300px로 설정 */
+  height: 40px; /* 예시로 40px로 설정 */
+  font-size: 18px; /* 텍스트 크기를 조절하세요. */
+  border-radius: 10px; /* 모서리를 둥글게 설정 */
+  border: none;
+}
+
+/* 텍스트 박스 스타일 */
+input[type="text"] {
+  /* 텍스트 박스의 너비와 높이를 조절하세요. */
+  width: 405px; /* 예시로 300px로 설정 */
+  height: 40px; /* 예시로 40px로 설정 */
+  font-size: 18px; /* 텍스트 크기를 조절하세요. */
+  border-radius: 10px; /* 모서리를 둥글게 설정 */
+  border: none;
+}
+input[type="text"]:focus {
+  outline: none; /* 포커스 테두리 제거 */
+  border: none; /* 테두리 제거 */
+}
+#todo-form input[type="text"]::placeholder {
+  color: white; /* 플레이스홀더 색상을 흰색으로 설정 */
+  /* 필요하다면 여기에 추가 스타일을 적용할 수 있습니다 */
+}
+/* 버튼 스타일 */
+button {
+  /* 버튼의 너비와 높이를 조절하세요. */
+  width: 100px; /* 예시로 100px로 설정 */
+  height: 40px; /* 예시로 40px로 설정 */
+  font-size: 18px; /* 버튼 텍스트 크기를 조절하세요. */
+  background-color: black; /* 버튼 배경색을 설정하세요. */
+  border-radius: 10px; /* 모서리를 둥글게 설정 */
+  color: white; /* 버튼 글자 색을 설정하세요. */
+  border: none; /* 버튼 테두리 제거 */
+  cursor: pointer; /* 포인터 커서 효과 추가 */
+}
+
+/* 버튼 호버(마우스 오버) 스타일 */
+button:hover {
+  background-color: white; /* 호버 시 배경색 변경 */
+  color: black;
+}
+
+.todo-item {
+  display: flex; /* 플렉스박스 레이아웃 설정 */
+  justify-content: space-between; /* 아이템들을 양쪽 끝으로 정렬 */
+  align-items: center; /* 세로축 중앙 정렬 */
+  padding: 5px; /* 패딩으로 내부 여백 추가 */
+  border-bottom: 3px solid #ddd; /* 하단 테두리 선 추가 */
+  margin-bottom: 1px; /* 항목 간 간격 */
+  width: 100%; /* 또는 적절한 너비 값으로 설정 */
+}
+
+.todo-text {
+  flex: 1; /* 글자 수에 상관없이 나머지 공간을 모두 차지하도록 설정 */
+  margin-right: 10px; /* 버튼과의 간격 설정 */
+}
+
+#todo-list {
+  max-height: 100px; /* 최대 높이 설정 */
+  overflow-y: auto; /* 세로 스크롤바 설정 */
+  width: 50%; /* 너비 설정 */
+  padding: 10px; /* 내부 여백 설정 */
+}
+
+/* 날씨 스타일 - 오른쪽 상단에 배치 */
+#weather {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 24px;
+  text-align: right;
+}
+
+/* 명언 스타일 - 아래 중앙에 배치 */
+#quote {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+#weather span:first-child::before {
+  content: "☁️"; /* 구름 이모지 추가 */
+  margin-right: 10px; /* 이모지와 텍스트 사이의 간격 조절 */
+  font-size: 40px;
+}
